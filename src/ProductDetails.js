@@ -3,7 +3,6 @@ import { Link, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import CartIcons from "./CartIcons";
 import "./ProductDetails.css";
-import ProductList from "./ProductList";
 
 function ProductDetails() {
   // get id by destructuring params from the URL

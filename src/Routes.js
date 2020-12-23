@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch, Redirect, Route } from "react-router-dom";
-// import Cart from "./Cart";
+import Cart from "./Cart";
 import ProductDetails from "./ProductDetails";
 import ProductList from "./ProductList";
 
@@ -13,9 +13,9 @@ function Routes() {
       <Route path="/products/:id" exact>
         <ProductDetails />
       </Route>
-      {/* <Route path="/cart" exact>
+      <Route path="/cart" exact>
         <Cart />
-      </Route> */}
+      </Route>
       <Redirect to="/" />
     </Switch>
   );
