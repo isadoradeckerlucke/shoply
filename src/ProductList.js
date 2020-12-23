@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import CartIcons from "./CartIcons";
 
 function ProductList() {
   const products = useSelector((st) => st.products);
@@ -9,11 +10,10 @@ function ProductList() {
       <div className="card">
         <div className="card-body">
           <h2 className="card-title text-center">
-            this is where the link would be
-            {/* <Link to = {`/products/${id}`}>{products[id].name}</Link> */}
+            <Link to={`/products/${id}`}>{products[id].name}</Link>
+            (${products[id].price})
           </h2>
-          this is where cart icon with id {id} would be
-          {/* <CartIcons id = {id} /> */}
+          <CartIcons id={id} />
         </div>
       </div>
     </div>
