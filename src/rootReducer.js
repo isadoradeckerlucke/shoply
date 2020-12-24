@@ -15,7 +15,10 @@ function rootReducer(state = DEFAULT_STATE, action) {
       const cartCopy = { ...state.cartItems };
       // if there is already this item in the cart, set that as initial quantity. otherwise start quantity at 0. then add 1.
       cartCopy[action.id] = (cartCopy[action.id] || 0) + 1;
-
+      console.log(
+        calculateCartTotal(state.products, cartCopy),
+        "i am cart value from root reducer"
+      );
       return {
         ...state,
         cartItems: cartCopy,

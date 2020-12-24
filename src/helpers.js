@@ -1,7 +1,7 @@
 // calculate the total price and round to two decimals
 // toFixed returns a string representation of numOBj that doesn't use exponential notation and has exactly __ digits after decimal place
 
-export function calculateCartTotal(products, cart, discountAmount = 0) {
+export function calculateCartTotal(products, cart) {
   let total = 0;
   for (let id in products) {
     // destructure producs object to get the price
